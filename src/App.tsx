@@ -11,8 +11,8 @@ function App() {
   return (
       <BrowserRouter basename="/cisco-exam">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/find" element={<Find />} />
+          <Route path="/" element={<Find />} />
+          <Route path="/train" element={<Home />} />
           <Route path="/game/:id" element={<Game />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
