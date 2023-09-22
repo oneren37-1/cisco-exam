@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 0 auto;
+  max-width: 960px;
+  width: 90%;
+}
+
+.logo {
+  line-height: 72px;
+  cursor: pointer;
+
+  & img {
+    vertical-align: middle;
+  }
+}
