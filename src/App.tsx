@@ -9,7 +9,7 @@ import Find from "./pages/Find";
 
 function App() {
   return (
-      <BrowserRouter>
+      <BrowserRouter basename="/cisco-exam">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/find" element={<Find />} />
