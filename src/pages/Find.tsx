@@ -2,7 +2,7 @@ import React from 'react';
 import PageLayout from "../components/PageLayout/PageLayout";
 import {Button, Card, Empty, Input} from "antd";
 import data from '../all.json';
-import {CloseOutlined, LinkOutlined} from "@ant-design/icons";
+import {CloseOutlined} from "@ant-design/icons";
 
 const Find: React.FC = () => {
     const [search, setSearch] = React.useState<string>('');
@@ -52,7 +52,9 @@ const Find: React.FC = () => {
                     setSearch(e.target.value)
                 }}
                 style={{
-                    marginTop: '50px'
+                    marginTop: '50px',
+                    border:  `5px solid ${cards.length === 1 ? 'rgba(0, 255, 0, 0.2)' : 'white'}`,
+                    borderRadius: '10px'
                 }}
                 value={search}
             />
