@@ -2,7 +2,7 @@ import React from 'react';
 import PageLayout from "../components/PageLayout/PageLayout";
 import {Button, Card, Empty, Input} from "antd";
 import data from '../all.json';
-import {LinkOutlined} from "@ant-design/icons";
+import {CloseOutlined, LinkOutlined} from "@ant-design/icons";
 
 const Find: React.FC = () => {
     const [search, setSearch] = React.useState<string>('');
@@ -47,10 +47,10 @@ const Find: React.FC = () => {
         <PageLayout>
             <Input.Search
                 placeholder="search"
-                // enterButton="Search"
+                enterButton={(<CloseOutlined />)}
                 size="large"
-                onSearch={value => {
-                    setSearch(value)
+                onSearch={() => {
+                    setSearch('')
                 }}
                 onChange={e => {
                     setSearch(e.target.value)
