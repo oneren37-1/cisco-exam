@@ -11,11 +11,7 @@ const Find: React.FC = () => {
     const [suggest, setSuggest] = React.useState<string[]>([])
 
     React.useEffect(() => {
-        console.log(suggest)
-    }, [suggest])
-
-    React.useEffect(() => {
-        if (search.length < 3) return;
+        if (search.length < 1) return;
         const suggestions: any = {}
 
         const filtered = data.filter(el => {
